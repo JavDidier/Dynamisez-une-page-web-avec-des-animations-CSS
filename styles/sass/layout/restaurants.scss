@@ -1,0 +1,126 @@
+/* RESTAURANTS */
+.restaurants {
+    background-color: #f6f6f6;
+    margin: 40px auto 0 auto;
+    width: 100%;
+    padding: 50px 20px;
+
+    &__h3 {
+        text-align: left;
+        width: 100%;
+        font-weight: 800;
+        font-size: 23px;
+        padding-bottom: 20px;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+}
+
+    /* CARD */
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 33px -9px rgb(170,170,170);
+        transition: transform 0.2s;
+    
+        &:hover {
+            -ms-transform: scale(1.0.25); /* IE 9 */
+            -webkit-transform: scale(1.0.25); /* Safari 3-8 */
+            transform: scale(1.025);
+        }
+
+        &__image {
+            height: 11rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+    
+        &__new {
+            color: #008563;
+            background-color: #99E2D0;
+            position: absolute;
+            padding: 5px 15px;
+            border-radius: 5px;
+            top: 15px;
+            right: 15px;
+            font-weight: 600;
+        }
+    }
+
+        .card-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px;
+
+            &__text {
+                flex: 1;
+                text-align: left;
+                text-decoration: none;
+                color: #000000;  
+
+                & h3 {
+                    margin: 0 0 5px 0;
+                    padding: 0;
+                }
+
+                & p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 16px;
+                    color: #313131;
+                }
+            }
+        }
+    
+/* HEART ICON  */
+.card-info__heart {
+height: 39px;
+width: 39px;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+background-color: #ffffff;
+
+    & .fa-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 25px;
+    }
+
+    & .fa-regular {
+    top: 0;
+    color: #000000;
+    background-color: #fff;
+    z-index: 2;
+    }
+
+    & .fa-solid {
+    top: 0;
+    color: #9356dc;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    z-index: 5;
+    }
+
+    & .fa-solid:hover {
+        transition-duration: 0.5s;
+        opacity: 1;
+    }
+}

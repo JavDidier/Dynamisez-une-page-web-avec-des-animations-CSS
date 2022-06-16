@@ -127,6 +127,7 @@ p, a, button {
   .steps li {
     display: flex;
     justify-content: flex-start;
+    text-align: center;
     align-items: center;
     list-style: none;
     width: 100%;
@@ -146,7 +147,7 @@ p, a, button {
     margin-left: -10px; }
 
 /* STEPS BUTTON */
-.steps-btn {
+.steps-tag {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,20 +159,20 @@ p, a, button {
   width: 100%;
   font-weight: 700;
   box-shadow: 1px 2px 20px 0px rgba(255, 255, 255, 0.5); }
-  .steps-btn:hover {
+  .steps-tag:hover {
     color: #000000;
     box-shadow: 1px 2px 15px 0px rgba(191, 191, 191, 0.3);
     background-color: #f5edff; }
-  .steps-btn:hover .steps-btn__icon {
+  .steps-tag:hover .steps-tag__icon {
     background-color: #9356dc;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-  .steps-btn__icon {
+  .steps-tag__icon {
     flex: 1;
     color: #626262;
     font-size: 18px; }
-  .steps-btn__p {
+  .steps-tag__p {
     flex: 2;
     text-align: left;
     font-size: 15px; }

@@ -29,6 +29,7 @@
     & li {
         display: flex;
         justify-content: flex-start;
+        text-align: center;
         align-items: center;
         list-style: none;
         width: 100%;
@@ -52,7 +53,7 @@
 }
 
 /* STEPS BUTTON */
-.steps-btn {
+.steps-tag {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +73,7 @@
         background-color: #f5edff;
     }
 
-    &:hover .steps-btn__icon {
+    &:hover .steps-tag__icon {
         background-color: #9356dc;
         background-clip: text;
         -webkit-background-clip: text;

@@ -9,6 +9,7 @@
         font-size: 23px;
         margin: 30px auto 20px auto;
     }
+
     &__nav {
         width: 100%;
         margin: 0 auto;
@@ -21,6 +22,9 @@
 .steps {
     padding: 0;
     counter-reset: compteurStep;
+
+        /* responsive */
+        @include l-screen {display: flex; gap: 20px; }
 
     & li {
         display: flex;

@@ -5,19 +5,37 @@
     background-color: #353535;
     color: #fff;
 
+    /* responsive */
+    @include m-screen { display: flex; align-items: center;}
+    @include l-screen { display: flex; align-items: center;}
+
     &__h4 {
         margin: 10px 0;
+
+        /* responsive */
+        @include m-screen { text-align: center; width: 50%;}
+        @include l-screen { text-align: center; width: 25%;}
     }
 }
 
 
 /* FOOTER NAV */
 .footer-nav {
+
+    /* responsive */
+    @include l-screen { 
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
     &__a {
         display: block;
         text-decoration: none;
         color: #fff;
         margin: 5px 0;
+
+        @include l-screen { margin-right: 15px;}
 
         &:hover {
             color: #FF79DA;
@@ -29,5 +47,7 @@
         width: 15px;
         height: 15px;
         margin-right: 15px;
+
+        @include l-screen { margin-right: 5px;}
     }
 }

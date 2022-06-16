@@ -10,10 +10,26 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 800;
         padding: 20px;
+
+            /* responsive */
+            @include m-screen {text-transform: uppercase;}
+            @include l-screen {text-transform: uppercase;}
+
+        & > br {
+            /* responsive */
+            @include m-screen {display: none;}
+            @include l-screen {display: none;}
+        }
     }
 
     &__p {
         color: #737272;
+
+        & > br {
+            @include m-screen {
+                display: none;
+            }
+        }
     }
 
     /* BANNER__BTN */

@@ -1,0 +1,12 @@
+/* MIXIN RESPONSIVE RELIÉ A UNE MAP*/
+@mixin m-screen {
+    @media all and (min-width: map-get($breakpoints, medium-screen)) and (max-width: map-get($breakpoints, large-screen))  {
+        @content;
+    }
+}
+
+@mixin l-screen {
+    @media all and (min-width: map-get($breakpoints, large-screen))  {
+        @content;
+    }
+}

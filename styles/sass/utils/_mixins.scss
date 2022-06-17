@@ -1,4 +1,4 @@
-/* MIXIN RESPONSIVE RELIÉ A UNE MAP*/
+/* RESPONSIVE*/
 @mixin m-screen {
     @media all and (min-width: map-get($breakpoints, medium-screen)) and (max-width: map-get($breakpoints, large-screen))  {
         @content;
@@ -9,4 +9,12 @@
     @media all and (min-width: map-get($breakpoints, large-screen))  {
         @content;
     }
+}
+
+
+@mixin flexColumnCenterAllWidth() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }

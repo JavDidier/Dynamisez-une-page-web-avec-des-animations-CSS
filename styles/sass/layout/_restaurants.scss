@@ -3,7 +3,7 @@
     background-color: #f6f6f6;
     margin: 40px auto 0 auto;
     width: 100%;
-    padding: 50px 20px;
+    padding: 50px 10px;
 
     &__h3 {
         text-align: left;
@@ -75,7 +75,7 @@
                 color: #000000;  
 
                 & h3 {
-                    margin: 0 0 5px 0;
+                    margin: 3px auto;
                     padding: 0;
                 }
 
@@ -87,46 +87,3 @@
                 }
             }
         }
-    
-/* HEART ICON  */
-.card-info__heart {
-height: 39px;
-width: 39px;
-padding: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-background-color: #ffffff;
-
-    & .fa-heart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    font-size: 25px;
-    }
-
-    & .fa-regular {
-    top: 0;
-    color: #000000;
-    background-color: #fff;
-    z-index: 2;
-    }
-
-    & .fa-solid {
-    top: 0;
-    color: #9356dc;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    z-index: 5;
-    }
-
-    & .fa-solid:hover {
-        transition-duration: 0.5s;
-        opacity: 1;
-    }
-}

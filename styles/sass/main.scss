@@ -9,24 +9,8 @@
 @import "utils/mixins";
 
 // Components
-@import "components/alert";
 @import "components/button";
-@import "components/badge";
-@import "components/label";
-@import "components/modal";
-@import "components/course-card";
-@import "components/infobox";
-@import "components/success-popup";
-@import "components/profile-card";
-
-// Pages
-@import "pages/product";
-@import "pages/product-single";
-@import "pages/blog";
-@import "pages/blog-single";
-@import "pages/invoice";
-@import "pages/login";
-@import "pages/signup";
+@import "components/_icon-heart";
 
 // Layout
 @import "layout/header";
@@ -36,6 +20,9 @@
 @import "layout/functionning";
 @import "layout/restaurants";
 @import "layout/footer";
+
+// Pages
+@import "pages/page-restaurants";
 
 /* FOLDERS DELETED
 - Themes

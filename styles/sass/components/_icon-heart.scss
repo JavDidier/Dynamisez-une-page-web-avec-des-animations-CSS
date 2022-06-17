@@ -1,0 +1,40 @@
+/* HEART ICON  */
+.heart {
+height: 39px;
+width: 39px;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+background-color: transparent;
+
+    & .fa-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 25px;
+    }
+
+    & .fa-regular {
+    color: #000000;
+    background-color: transparent;
+    z-index: 2;
+    }
+
+    & .fa-solid {
+    color: #9356dc;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    z-index: 5;
+    }
+
+    & .fa-solid:hover {
+        transition-duration: 0.5s;
+        opacity: 1;
+    }
+}

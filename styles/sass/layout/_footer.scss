@@ -11,6 +11,7 @@
 
     &__h4 {
         margin: 10px 0;
+        font-weight: 400;
 
         /* responsive */
         @include m-screen { text-align: center; width: 50%;}

@@ -1,4 +1,4 @@
-/* IMPORTATION DES POLICES GOOGLE FONTS */
+/* IMPORTATION GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand");
 /* GLOBAL */
@@ -27,7 +27,7 @@ p, a, button {
   color: #fff;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  padding: 20px 20px;
+  padding: 15px 20px;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;

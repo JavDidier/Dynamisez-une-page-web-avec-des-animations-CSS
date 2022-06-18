@@ -37,16 +37,14 @@
     }
 
     & li:before {
+        @include flexCenterCenter();
         counter-increment: compteurStep;
         content: counter(compteurStep) " ";
         background: #9356dc;
         height: 25px;
         width: 25px;
         border-radius: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
+        color: $whiteColor;
         position: absolute;
         margin-left: -10px;
     }
@@ -54,10 +52,7 @@
 
 /* STEPS BUTTON */
 .steps-tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    @include flexCenterCenter();
     border: none;
     background-color: #f6f6f6;
     padding: 20px;
@@ -74,7 +69,7 @@
     }
 
     &:hover .steps-tag__icon {
-        background-color: #9356dc;
+        background-color: $primaryColor;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

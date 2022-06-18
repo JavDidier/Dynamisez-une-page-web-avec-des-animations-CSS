@@ -1,8 +1,8 @@
 /* BANNER - IMAGE */
 .restaurant-image {
-        width: 100%;
-        height: 75vh;
-        object-fit: cover;
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
 }
 
 /* MAIN-RESTAURANT */
@@ -24,11 +24,31 @@
   align-items: center;
   padding: 10px 0px;
 
+    /* responsive */
+  @include m-screen {
+    display: block;
+  }
+
+  @include l-screen {
+      display: block;
+  }
+
     &__h2 {
         font-family: 'Shrikhand', sans-serif;
         font-weight: 500;
         font-size: 27px;
     }
+}
+
+.product {
+  /* responsive */
+  @include m-screen {
+    width: 90%;
+  }
+
+  @include l-screen {
+    width: 33%;
+  }
 }
 
 /* TITRE */
@@ -37,20 +57,19 @@
     font-weight: 400;
     font-size: 21px;
     padding-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 35px;
     text-align: left;
 
     &:after {
-        content: "";
-        width: 3rem;
-        height: 0.25rem;
-        background-color: #99e2d0;
-        position: absolute;
-        left: 0;
-        bottom: 0;
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 4px;
+      background-color: $thirdColor;
+      bottom: 0;
+      left: 0;
     }
 }
-
 
 /* DETAILS PRODUCT*/
 .detail-product {
@@ -59,42 +78,26 @@
     padding: 10px;
     border-radius: 15px;
     margin: 20px auto;
-    box-shadow: 0.25rem 0.25rem 1rem #00000043;
+    box-shadow: 0.20rem 0.20rem 1.2rem #00000043;
     overflow: hidden;
     cursor: pointer;
     width: 100%;
-    text-align: left;
-
-    animation: showProduct .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(0);
-    transition: 0.6s;
-    animation-duration: 0.6s;
-
     max-width: 100%;
-}
+    max-width: 600px;
+    text-align: left;
+    opacity: 0%;
 
-.animation-1 {
-    animation-delay: 0s;
-}
+    transition: 0.5s;
 
-.animation-2 {
-    animation-delay: .1s;
-}
-
-.animation-3 {
-    animation-delay: .2s;
-}
-
-@keyframes showProduct {
-    0% {
-      transform: scale(0)
+    /* responsive */
+    @include m-screen {
+      width: 70%;
     }
-    100% {
-      transform: scale(1);
+
+    @include l-screen {
+      width: auto;
     }
-  }
+}
 
 .header-detail-product h4 {
     font-weight: bold;
@@ -112,8 +115,8 @@
 /* PRICE */
 .price-detail-product {
     display: flex;
-    align-items: flex-end;
     justify-content: flex-end;
+    align-items: flex-end;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -121,7 +124,7 @@
 /* EFFET PRODUIT ICON */
 .effect-detail-product {
     position: absolute;
-    background-color: #99e2d0;
+    background-color: $thirdColor;
     width: 70px;
     height: 100px;
     margin-top : -12px;
@@ -134,102 +137,48 @@
     transition-duration: 0.6s;
 }
 
-@-webkit-keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-72px);
-              transform: translateX(-72px);
-    }
-  }
-  @keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-72px);
-              transform: translateX(-72px);
-    }
-  }
+.detail-product:hover {
+  transition-property: padding-right;
+  padding-right: 80px;
 
-  /* TEST RETOUR */
-  @-webkit-keyframes slide-default {
-    0% {
-      -webkit-transform: translateX(-72px);
-              transform: translateX(-72px);
-    }
-    100% {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
+  &:hover .effect-detail-product {
+      visibility: visible;
+      -webkit-animation: slide-left 0.6s cubic-bezier(0.250, 0.450, 0.450, 0.900) both;
+      animation: slide-left 0.6s cubic-bezier(0.250, 0.450, 0.450, 0.940) both;
   }
-  @keyframes slide-default {
-    0% {
-      -webkit-transform: translateX(-72px);
-              transform: translateX(-72px);
-              opacity: 0%;
-    }
-    100% {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-              opacity: 100%;
-    }
-  }
-
-  .detail-product:hover {
-    transition-property: padding-right;
-    padding-right: 80px;
-
-    &:hover .effect-detail-product {
-        visibility: visible;
-        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
 }
 
-/* ANIMATION ROTATION ICON */
-@-webkit-keyframes icon-rota {
-    from {
-      -webkit-transform: rotate(-360deg);
-              transform: rotate(-360deg);
-    }
-    to {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-  }
-
-  @keyframes icon-rota {
-    from{
-        -webkit-transform: rotate(-360deg);
-        transform: rotate(-360deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-  }
-
 .detail-product:hover .div-effect-icon {
-  animation: icon-rota;
+  animation: icon-rotation;
   animation-duration: 0.5s;
 }
 
 .div-effect-icon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    animation-duration: 0.5s;
+  @include flexCenterCenter();
+  height: 25px;
+  width: 25px;
+  background-color: $whiteColor;
+  border-radius: 100px;
+  animation-duration: 0.5s;
     
     & .fa-check {
-      color: #99e2d0;
+      color: $thirdColor;
   }
 }
 
+.container-product {
+
+  /* responsive */
+  @include m-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  @include l-screen {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+  }
+}

@@ -1,34 +1,31 @@
-// Animations
-@import "animations/loader";
-
 // Base
 @import "base/typography";
 @import "base/normalize";
 @import "base/base";
 
-// utils
+// Utils
 @import "utils/variables";
 @import "utils/colors";
 @import "utils/mixins";
 
+// Animations
+@import "animations/loader";
+@import "animations/animations";
+
 // Components
 @import "components/button";
-@import "components/_icon-heart";
+@import "components/icon-heart";
 
-// Layout
-@import "layout/header";
-@import "layout/search";
-@import "layout/banner";
-@import "layout/main";
-@import "layout/functionning";
-@import "layout/restaurants";
-@import "layout/footer";
+// Sections
+@import "sections/a-header";
+@import "sections/b-search";
+@import "sections/c-banner";
+@import "sections/d-main";
+@import "sections/e-functionning";
+@import "sections/f-restaurants";
+@import "sections/g-footer";
 
 // Pages
 @import "pages/page-restaurants";
-
-/* FOLDERS DELETED
-- Themes
-- Vendors */
 
 

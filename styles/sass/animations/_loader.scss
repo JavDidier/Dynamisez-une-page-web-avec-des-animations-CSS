@@ -1,106 +1,81 @@
 .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenterCenter();
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.95);
-    z-index: 3;
+    z-index: 5;
+
+    cursor: none;
 
     /* ANIMATION */
-    animation-name: anim-hidden;
-    animation-duration: 2.5s;
-    animation-iteration-count: 1;
-    animation-timing-function:step-end;
-    visibility: hidden;
+    @include spinner;     
 }
 
-.loading__svg{
+.loading-svg{
     width: 200px;
-}
 
-.loading-svg__body--cup {
-    fill: #9356DC;
-}
-
-@keyframes anim-hidden {
-    0% {
-        visibility: visible;
-    }
-    100% {
-        visibility: hidden;
-    }
-}
-
-/* SMOKE LEFT */
-.loading-svg__smoke--left {
-    animation-name: smoke-anim-left;
-    animation-duration: 3s;
-    animation-iteration-count: 2;
-    animation-timing-function: ease-in;
-}
-
-@keyframes smoke-anim-left {
-    0% {
-        opacity: 0;
-        fill: #9356DC;
-    }
-    30% {
-        opacity: 1;
-        fill: #FF79DA;
-    }
-    100% {
-        opacity: 0;
-        fill: #9356DC;
-    }
-}
-
-/* SMOKE MIDDLE */
-.loading-svg__smoke--middle {
-    animation-name: smoke-anim-middle;
-    animation-duration: 3s;
-    animation-iteration-count: 2;
-    animation-timing-function: ease-in;
-}
-
-@keyframes smoke-anim-middle {
-    0% {
-        opacity: 0;
-        fill: #FF79DA;
-    }
-    50% {
-        opacity: 1;
-        fill: #99E2D0;
-    }
-    100% {
-        opacity: 0;
-        fill: #9356DC;
-    }
-}
-
-/* SMOKE RIGHT */
-.loading-svg__smoke--right {
-    animation-name: smoke-anim-right;
-    animation-duration: 3s;
-    animation-iteration-count: 2;
-    animation-timing-function: ease-in;
-}
-
-@keyframes smoke-anim-right {
-    0% {
-        opacity: 0;
-        fill: #FF79DA;
-    }
-    70% {
-        opacity: 1;
-        fill: #9356DC;
-    }
-    100% {
-        opacity: 0;
-        fill: #FF79DA;
+    &__body--cup {
+        fill: $primaryColor;
     }
 
+    /* SMOKE ANIMATION */ 
+    &__smoke--left {
+        animation-name: smoke-anim-left;
+        @include smoke-anim-commun();
+        @keyframes smoke-anim-left {
+            0% {
+                opacity: 0;
+                fill: $primaryColor;
+            }
+            30% {
+                opacity: 1;
+                fill: $secondaryColor;
+            }
+            100% {
+                opacity: 0;
+                fill: $primaryColor;
+            }
+        }
+    } 
+
+    &__smoke--middle {
+        animation-name: smoke-anim-middle;
+        @include smoke-anim-commun();
+        @keyframes smoke-anim-middle {
+            0% {
+                opacity: 0;
+                fill: $secondaryColor;
+            }
+            50% {
+                opacity: 1;
+                fill: $thirdColor;
+            }
+            100% {
+                opacity: 0;
+                fill: $primaryColor;
+            }
+        }
+    }       
+    
+    &__smoke--right {
+        animation-name: smoke-anim-right;
+        @include smoke-anim-commun();
+        @keyframes smoke-anim-right {
+            0% {
+                opacity: 0;
+                fill: $secondaryColor;
+            }
+            70% {
+                opacity: 1;
+                fill: $primaryColor;
+            }
+            100% {
+                opacity: 0;
+                fill: $secondaryColor;
+            }
+        }
+    }       
 }
 
 

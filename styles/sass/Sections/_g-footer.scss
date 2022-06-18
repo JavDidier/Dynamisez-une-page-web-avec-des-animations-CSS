@@ -33,13 +33,14 @@
     &__a {
         display: block;
         text-decoration: none;
-        color: #fff;
+        color: $whiteColor;
         margin: 5px 0;
 
+        /* responsive */
         @include l-screen { margin-right: 15px;}
 
         &:hover {
-            color: #FF79DA;
+            color: $secondaryColor;
         }
     }
 
@@ -49,6 +50,7 @@
         height: 15px;
         margin-right: 15px;
 
+        /* responsive */
         @include l-screen { margin-right: 5px;}
     }
 }

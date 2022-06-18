@@ -29,6 +29,25 @@
 > .Vérification HTML / CSS aux W3C, et ajustement/ rectification si besoin.
 
 
+
 * Partie 2 : la page "La palette du goût" et son necessaire :
 
-( SOMMAIRE EN COURS DE CRÉATION)
+- 1) Création de toutes les pages HTML / CSS
+
+- 2) Création du LOADING SPINNER (div html)
+
+- 3) Création du LOADING-SPINNER (style)
+
+- 4) Mise à jour de toutes les pages HTML pour les animations et optimisation du code
+
+- 5) Vérification et ajustement des animations 
+
+- 6) Vérification que toutes les pages HTML et le CSS sont valides au W3C
+
+- 7) W3C (HTML / CSS) et test (le site fonctionnent sans problème sous firefox et Chrome)
+
+
+
+* Partie 3 : Mise en ligne :
+
+- 1) Envoie vers Git pages

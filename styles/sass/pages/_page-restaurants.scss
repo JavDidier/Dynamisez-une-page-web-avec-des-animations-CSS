@@ -172,13 +172,13 @@
   @include m-screen {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
   }
 
   @include l-screen {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
   }
 }

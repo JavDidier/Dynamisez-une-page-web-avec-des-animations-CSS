@@ -190,11 +190,12 @@ p, a, button {
   margin: 20px;
   margin-top: 40px;
   cursor: pointer;
-  box-shadow: 2px 2px 6px 2px rgba(54, 54, 54, 0.5);
+  box-shadow: 2px 2px 6px 2px rgba(54, 54, 54, 0.3);
   width: 200px; }
 
 .btn-primary:hover {
-  opacity: 0.9; }
+  opacity: 0.9;
+  box-shadow: 2px 2px 6px 3px rgba(54, 54, 54, 0.4); }
 
 /* HEART ICON  */
 .heart {
@@ -645,12 +646,12 @@ p, a, button {
     .container-product {
       display: flex;
       flex-direction: column;
-      align-items: center; } }
+      align-items: flex-start; } }
   @media all and (min-width: 992px) {
     .container-product {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
